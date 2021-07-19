@@ -1,0 +1,15 @@
+<ul th:fragment="admin"
+     th:remove="tag"
+     xmlns:th="http://www.thymeleaf.org/"
+     xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	
+	<li class="nav-item">
+		<a class="nav-link"
+		   th:href="@{/admin/dashboard}">
+			<i class="fas fa-fw fa-tachometer-alt"></i>
+			<span>Dashboard</span>
+		</a>
+	</li>
+	
+
+</ul>

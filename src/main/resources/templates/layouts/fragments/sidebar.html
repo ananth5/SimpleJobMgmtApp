@@ -1,0 +1,20 @@
+<ul class="sidebar navbar-nav align-items-center"
+    th:fragment="sidebar"
+    sec:authorize="isAuthenticated()"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+    xmlns:th="http://www.thymeleaf.org/">
+	
+	<!-- user messages -->
+
+	<li sec:authorize="hasAuthority('ADMIN')"
+	     th:remove="tag"
+	     th:replace="layouts/nav/admin :: admin">
+		<!-- admin nav -->
+	</li>
+	
+	<li sec:authorize="hasAuthority('USER')"
+	     th:remove="tag"
+	     th:replace="layouts/nav/user :: user">
+		<!-- user nav -->
+	</li>
+</ul>
